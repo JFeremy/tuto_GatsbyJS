@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 
 const PoiPage = ({location}) => (
     <div>
-        <Link to='/'>Accueil</Link>
         <dl>
             <dt>Titre</dt>
                 <dd>{location.state.dataPoi.title}</dd>
