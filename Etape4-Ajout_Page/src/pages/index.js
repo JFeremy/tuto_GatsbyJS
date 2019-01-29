@@ -1,5 +1,5 @@
 import React, {Fragment} from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 export default () => (
     <StaticQuery
@@ -45,7 +45,7 @@ export default () => (
                     <ul>
                         {data.democityv4.pois.edges.map(dataPoi => 
                         <li key={dataPoi.node.id}> 
-                            {dataPoi.node.title}
+                            <Link to='/poiPage/' state={{ dataPoi: dataPoi.node }}>{dataPoi.node.title}</Link>
                         </li>)}
                     </ul>
                 </div>
